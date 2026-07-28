@@ -1,5 +1,11 @@
 # Changelog — AI-Native PDLC Maturity Model
 
+## v1.1.0 — 2026-07-28
+
+Added a **Verification** clause to every A→B, B→C, and C→D transition across D4–D12 (36 new clauses), matching the family's own precedent — SDLC's D4–D13 each carry an explicit, practical test of whether the destination state was actually reached, not just claimed. Where a transition already carried an informal "The test: ..." sentence (present in some but not all of D5–D11), it's reformatted as an explicit **Verification:** clause with the same substance, not rewritten. Level E's own row is unchanged — its existing "Sustain: ..." text already serves this purpose at the top of the ladder, per the same convention SDLC uses (a sustainment note instead of a further transition).
+
+No change to any dimension's underlying maturity-state content — the Level descriptions and existing transition guidance are unchanged; this adds a missing verification layer, it does not revise what "good" looks like at any level.
+
 ## v1.0.0 — 2026-07-27
 
 First locked baseline, repo created. Content originates from David Facer's own working draft (section 5 of the family's original brief, filed verbatim 2026-07-21), held pending two conditions:
