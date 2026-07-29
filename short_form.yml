@@ -1,0 +1,105 @@
+# Short-form compression for the Whole-Model View (aimaturitymodels.com)
+#
+# One terse, one-sentence string per dimension/level, keyed "D<N>.<Level>",
+# for D4-D12 only -- D1-D3 are inherited by reference from the SDLC repo's
+# own shared_intelligence_layer.md, and reuse that repo's own short_form.yml
+# compression directly (identical content, no separate compression needed
+# or wanted here). 45 cells, each 7-9 words (verified programmatically,
+# same discipline as the SDLC compression this one is modeled on).
+#
+# Full definitions, transitions, and verification clauses live in
+# ai_native_pdlc_maturity_model.md -- this file is a compression of that,
+# not a replacement for it.
+#
+# PROVENANCE: this compression was authored against and verified directly
+# by reading ai_native_pdlc_maturity_model.md at commit 67806c6 (tag
+# v1.1.0, the commit that landed per-transition verification clauses).
+# Run `git diff v1.1.0 HEAD -- ai_native_pdlc_maturity_model.md` from this
+# repo's root -- an empty diff means this compression is still current.
+
+version: "1.0.0"
+source_matrix_version: "1.1.0"
+source_matrix_commit: "67806c6211c45b09eab5b05bb73d6b9d07fd9a0b"
+generated: "2026-07-28"
+
+dimensions:
+  D4:
+    title: "Requirements management"
+    levels:
+      A: "Informal specs, unsystematic AI drafting, no shared traceability yet."
+      B: "Shared spec record exists; AI drafts, humans still reformulate."
+      C: "AI generation consumes specs directly, no reformulation needed now."
+      D: "Specs auto-reconcile against signal; AI flags gaps automatically."
+      E: "AI keeps specs self-maintaining; PM reviews surfaced conflicts only."
+
+  D5:
+    title: "Prioritization & tradeoffs"
+    levels:
+      A: "Backlog order argued case-by-case; AI drafts private business cases."
+      B: "Consistent framework exists; AI summarizes, financial expedience still decides."
+      C: "Cadence tied to budget; AI applies current intelligence directly."
+      D: "AI surfaces recommendations; PM ratifies or overrides with reasoning."
+      E: "AI-surfaced tradeoffs continuously maintained; PM audits for drift."
+
+  D6:
+    title: "Executive engagement & authority"
+    levels:
+      A: "Authority diffuse, whoever has leverage; PM only coordinates."
+      B: "PM guides authority; senior leadership still ratifies every decision."
+      C: "PM authority documented and narrow; leadership approves, not initiates."
+      D: "AI keeps decision basis visible; PM authority now self-sustaining."
+      E: "AI-assisted transparency real-time; engagement means surfacing conflicts only."
+
+  D7:
+    title: "Organizational evangelism & alignment"
+    levels:
+      A: "Direction communicated reactively; alignment relies on one-on-one conversations."
+      B: "AI drafts cadenced artifacts; delivery still manual, undifferentiated audience."
+      C: "AI renders audience-specific views; propagation stays event-driven only."
+      D: "AI propagates continuously; misalignment still caught reactively by teams."
+      E: "AI proactively flags misalignment; propagation is fully automatic."
+
+  D8:
+    title: "Portfolio & investment management"
+    levels:
+      A: "Portfolio bets episodic, subjective; no tracking of returns."
+      B: "AI assembles investment cases; qualitative judgment still drives decisions."
+      C: "AI models scenarios against intelligence; outcome feedback stays manual."
+      D: "AI surfaces investment recommendations; PM still assembles the case."
+      E: "Signal-triggered decisions; AI recommendations ratified, not assembled."
+
+  D9:
+    title: "GTM cadence & market activation"
+    levels:
+      A: "GTM episodic, launch-driven; functions render positioning independently."
+      B: "AI drives cadenced GTM artifacts; functions still render independently."
+      C: "Shared AI model drives GTM; updates remain milestone-triggered only."
+      D: "AI updates pricing near-continuously; a defined cadence still remains."
+      E: "AI maintains GTM continuously; pricing responds near-real-time."
+
+  D10:
+    title: "Experimentation & validation"
+    levels:
+      A: "Prototyping ad hoc; findings rarely feed back systematically."
+      B: "AI synthesizes validation findings; manual reformulation required for engineering."
+      C: "AI accelerates prototypes; parallel track's latency now shrinking."
+      D: "Prototype velocity matches delivery; promote-or-discard is a product decision."
+      E: "Prototype track subsumed; hypotheses flow straight through delivery."
+
+  D11:
+    title: "Analytics & outcome measurement"
+    levels:
+      A: "Outcomes assessed anecdotally after the fact; no standing view."
+      B: "AI assembles scheduled reviews; initiative-scoped, no portfolio visibility yet."
+      C: "AI assembles evidence packages at review; feedback still manual."
+      D: "AI surfaces anomalies continuously; only two failure classes distinguished."
+      E: "AI distinguishes all four failure classes; PM interprets responses."
+
+  D12:
+    title: "Feedback loop velocity"
+    levels:
+      A: "Cycle time unmeasured; handoffs dominate, response speed unknown."
+      B: "Cycle time measured retrospectively; bottleneck handoff not yet identified."
+      C: "Cycle time tracked continuously; bottleneck resolution still separately planned."
+      D: "Bottleneck closure now routine priority input, same as features."
+      E: "Days-not-months cycle time; a genuine competitive differentiator now."
