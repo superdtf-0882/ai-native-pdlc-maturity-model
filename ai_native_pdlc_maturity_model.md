@@ -68,7 +68,7 @@ PDLC-specific deltas on top of the shared text:
 
 #### D5. Prioritization & tradeoffs
 
-**Type:** Model-native | **Note:** See also the AI-Native Product Prioritization Maturity Model (standalone), which elaborates this dimension at sub-dimension depth.
+**Type:** Model-native | **Note:** See also the AI-Native Portfolio Prioritization Maturity Model (standalone), which elaborates this dimension at sub-dimension depth.
 
 **Definition:** The capability to make and maintain explicit, AI-assisted investment decisions across a contested backlog, with documented tradeoff rationale continuously reconciled against market intelligence, portfolio thresholds, and outcome signals.
 
@@ -152,7 +152,7 @@ PDLC-specific deltas on top of the shared text:
 
 #### D11. Analytics & outcome measurement
 
-**Type:** Model-native | **Note:** This is the PM-function view of instrumentation — product outcome measurement, not delivery-system observability (that is SDLC's own D12). Failure classification vocabulary at Level D is borrowed from the AI-Native Product Prioritization Maturity Model.
+**Type:** Model-native | **Note:** This is the PM-function view of instrumentation — product outcome measurement, not delivery-system observability (that is SDLC's own D12). Failure classification vocabulary at Level D is borrowed from the AI-Native Portfolio Prioritization Maturity Model.
 
 **Definition:** The capability to continuously measure whether PM decisions are producing intended results — revenue impact, adoption, retention, customer satisfaction — and feed those signals back into upstream dimensions as a closed loop.
 

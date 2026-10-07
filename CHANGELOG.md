@@ -1,5 +1,9 @@
 # Changelog — AI-Native PDLC Maturity Model
 
+## v1.2.1 — 2026-10-07
+
+**A name, four times, and nothing else.** The standalone model that D5's note and D11's note point to was renamed the AI-Native Portfolio Prioritization Maturity Model at its own v1.4.0 (formerly the AI-Native Product Prioritization Maturity Model). This model's D5 and D11 notes, and the D5 and D11 deep-dives, now use the new name. No level, transition or verification clause changed; scores against v1.2.0 are unaffected.
+
 ## v1.2.0 — 2026-07-28
 
 Added `deep_dives/` — narrative-style Per-Dimension Deep-Dive essays for all 12 dimensions, for aimaturitymodels.com's Deep-Dive pages (matching the SDLC model's own precedent). D1–D3 reuse the SDLC repo's ratified Shared Intelligence Layer essays directly, each with one added paragraph naming this model's own delta (D1's portfolio-investment feed into D8; D3's absorption of strategic synthesis; D2 carries no delta and is reused verbatim). D4–D12 are authored fresh, grounded in this matrix's own v1.1.0 locked content including the per-transition verification clauses. No change to any dimension's underlying maturity-state content — this adds narrative essay content, it does not revise the matrix itself.
