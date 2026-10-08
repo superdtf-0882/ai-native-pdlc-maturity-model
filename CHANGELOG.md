@@ -1,5 +1,9 @@
 # Changelog — AI-Native PDLC Maturity Model
 
+## v1.2.3 — 2026-10-08
+
+**One line, and nothing else.** The level names line said the names are identical across "(SDLC, PDLC, and Prioritization)": it now names all four models, Enterprise Architecture included, by their current names, as the Portfolio Prioritization model's v1.4.1 does. No level, transition or verification changed. Found by CC in aimaturitymodels.com's full digest while fixing the same line in the Portfolio Prioritization model (OKF-TOGAF#169).
+
 ## v1.2.2 — 2026-10-08
 
 **The matrix's own version line, corrected.** v1.2.1 changed two notes in the matrix and left its version line reading 1.2.0. It now names this release, and says what v1.2.1 did. Nothing else changed. Found by an outside reading of aimaturitymodels.com's full digest (OKF-TOGAF#169).
