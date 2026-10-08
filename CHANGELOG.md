@@ -1,5 +1,9 @@
 # Changelog — AI-Native PDLC Maturity Model
 
+## v1.2.2 — 2026-10-08
+
+**The matrix's own version line, corrected.** v1.2.1 changed two notes in the matrix and left its version line reading 1.2.0. It now names this release, and says what v1.2.1 did. Nothing else changed. Found by an outside reading of aimaturitymodels.com's full digest (OKF-TOGAF#169).
+
 ## v1.2.1 — 2026-10-07
 
 **A name, four times, and nothing else.** The standalone model that D5's note and D11's note point to was renamed the AI-Native Portfolio Prioritization Maturity Model at its own v1.4.0 (formerly the AI-Native Product Prioritization Maturity Model). This model's D5 and D11 notes, and the D5 and D11 deep-dives, now use the new name. No level, transition or verification clause changed; scores against v1.2.0 are unaffected.
