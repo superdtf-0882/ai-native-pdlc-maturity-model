@@ -2,6 +2,8 @@
 
 A maturity model for the Product Development Life Cycle (PDLC) — specifically, the Product Management function — in the age of AI-assisted work. Part of the same family as the [AI-Native SDLC Maturity Model](https://github.com/superdtf-0882/ai-native-sdlc-maturity-model), sharing that model's D1–D3 (market discovery, persona development, positioning & competitive intelligence) by direct reference rather than a duplicated copy.
 
+**Versions.** The repository's release tag versions the repository; the model's own version line names the release that last changed its text. A release that changes only other files leaves the version line as it was.
+
 ## What this is
 
 12 dimensions (D1–D12), each scored on a five-level ladder (A–E) sharing one family-wide vocabulary — Nascent / Modeled / Continuous / Integral / Telemetric — locked across every model in this family. D1–D4 originate from or converge with the SDLC model; D5–D11 are PM-native, with no SDLC equivalent; D12 is this model's own feedback-loop-velocity dimension.
