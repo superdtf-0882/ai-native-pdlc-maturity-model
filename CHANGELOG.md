@@ -1,5 +1,16 @@
 # Changelog — AI-Native PDLC Maturity Model
 
+## v1.2.4 — 2026-10-17
+
+A wording release under the model family's parts standard (STD-MODEL-PARTS v1.1). No level, transition or verification changed, and no score against v1.2.3 is affected.
+
+- The level-names section is the five names and a pointer to the family's one home for them, `family_maturity_levels.md` in the SDLC repository at v1.4.2, in its own section before the reading rules. Its table, its list of the family's models and its closing sentence go.
+- D1–D3 stand under their own range heading, `## D1–D3. Shared Intelligence Layer`, with a basis line naming the layer at SDLC v1.4.3, its common-form tag; their text there is the same as at v1.4.0. PDLC's own deltas on D1 and D3 stay.
+- The model no longer describes the family's other models: the three group headings go; the opening and the family-position line keep what they say of PDLC, the latter corrected, since D4 is this model's own; D4's, D5's, D11's and D12's notes cite the other models by standard ID (`STD-SDLC-MM`, `STD-PRIORITIZATION-MM`).
+- Pre-AI and Exempt are named by their source, the EA model's text at v1.1.2.
+- The README links the family's models page, says D1–D3 come from the shared layer at v1.4.3, and states the version rule.
+- `tools/release-check.js` and `tools/model-parser.js` are the practice's template's current copies; `short_form.yml` cites this release's text commit.
+
 ## v1.2.3 — 2026-10-08
 
 **One line, and nothing else.** The level names line said the names are identical across "(SDLC, PDLC, and Prioritization)": it now names all four models, Enterprise Architecture included, by their current names, as the Portfolio Prioritization model's v1.4.1 does. No level, transition or verification changed. Found by CC in aimaturitymodels.com's full digest while fixing the same line in the Portfolio Prioritization model (OKF-TOGAF#169).

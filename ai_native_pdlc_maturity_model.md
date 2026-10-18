@@ -1,10 +1,18 @@
 # AI-Native PDLC Maturity Model — Matrix
 
-**Version 1.2.3 — 2026-10-08** (the level names line now names all four models in the family, Enterprise Architecture included, by their current names. No level, transition or verification changed; scores against v1.2.2 are unaffected) Previously: **Version 1.2.2 — 2026-10-08** (this line corrected: v1.2.1 changed D5's and D11's notes to name the AI-Native Portfolio Prioritization Maturity Model and did not update this version line. No level, transition or verification changed in either release) Previously: **Version 1.2.0 — 2026-07-28** (Per-Dimension Deep-Dive essays added in `deep_dives/` for all 12 dimensions — narrative content, no change to this matrix. v1.1.0 added per-transition verification clauses for D4–D12, matching the family's own precedent — SDLC's D4–D13 each carry an explicit test of whether the destination state was actually reached, not just claimed. D1–D3 are unaffected — they're inherited by reference from `shared_intelligence_layer.md`, not owned here. No change to any dimension's underlying maturity-state content; where a transition already carried an informal "The test: ..." sentence, it's reformatted as an explicit **Verification:** clause with the same substance, not rewritten. See `CHANGELOG.md`. Locked baseline remains v1.0.0 — 2026-07-27, unchanged below.)
+**Version 1.2.4 — 2026-10-17** (a wording release under the model family's parts standard: the level names point to the family's one file of them, the model no longer describes the family's other models, D1–D3 stand under their own range heading with a basis line, and Pre-AI and Exempt are named by their source. No level, transition or verification changed; scores against v1.2.3 are unaffected. See `CHANGELOG.md`.)
 
-This is the full A–E maturity matrix for the AI-Native PDLC Maturity Model — 12 dimensions (D1–D3 by reference, D4–D12 in full below), readable in-browser and directly usable as input to AI tools. **This markdown document is the source of truth for D4–D12.** D1–D3 are sourced from `shared_intelligence_layer.md`, not this file — PDLC and SDLC converge on genuinely identical language for those three dimensions; D4 is where the two models diverge, in kind rather than degree (see D4's own note below).
+This is the full A–E maturity matrix for the AI-Native PDLC Maturity Model — 12 dimensions (D1–D3 by reference, D4–D12 in full below), readable in-browser and directly usable as input to AI tools. **This markdown document is the source of truth for D4–D12.** D1–D3 are sourced from `shared_intelligence_layer.md`, not this file; D4 is this model's own (see D4's own note below).
 
 For the design principles and provenance behind this matrix, see `README.md`.
+
+---
+
+## Family maturity names
+
+A — Nascent · B — Modeled · C — Continuous · D — Integral · E — Telemetric
+
+Names, descriptions and the general shape: family_maturity_levels.md in github.com/superdtf-0882/ai-native-sdlc-maturity-model at v1.4.2.
 
 ---
 
@@ -16,27 +24,14 @@ Dimensions are independently scored — an organization can be advanced in one d
 
 Each level is followed by the transition required to reach the next level, and a verification clause — a practical test of whether the destination state was actually reached, not just claimed. Level E is followed by a sustainment note instead of a further transition, since there is no Level F: at the top of the ladder, the work shifts from climbing to keeping the capability from quietly regressing.
 
-**Family position:** PDLC measures the Product Management function. D1–D4 are inherited from the shared intelligence layer / SDLC (D1–D3 fully shared; D4 diverges by design). D5–D11 are PM-native, with no SDLC equivalent. D12 is this model's own feedback-loop-velocity dimension — an S0 echo, virtually identical in shape to SDLC's D13.
+**Family position:** PDLC measures the Product Management function. D1–D3 are inherited by reference from `STD-SHARED-INTELLIGENCE`; D4–D12 are this model's own, D4 diverging from `STD-SDLC-MM` D4 and D12 echoing `STD-SDLC-MM` D13.
 
-### Maturity-level names
 
-The five letters A–E carry a family-wide name, identical across every dimension and every model in this family (SDLC, PDLC, Portfolio Prioritization, and Enterprise Architecture), used as column headers wherever the matrix is rendered:
+## D1–D3. Shared Intelligence Layer
 
-| Letter | Name | In one line |
-|---|---|---|
-| A | **Nascent** | Ad hoc and inconsistent — nobody has yet defined what "good" looks like here. |
-| B | **Modeled** | A real, deliberate method exists, but it's manual and owned by one person or function. |
-| C | **Continuous** | The method runs constantly on its own cadence, still narrowly owned but always on. |
-| D | **Integral** | The capability is load-bearing and shared beyond its original owner — removing it would break something real. |
-| E | **Telemetric** | A continuous two-way loop: signal flows in, action flows back out, close to real time. |
+**Basis:** STD-SHARED-INTELLIGENCE v1.2, github.com/superdtf-0882/ai-native-sdlc-maturity-model/shared_intelligence_layer.md at v1.4.3; referenced.
 
-These names describe a general shape of maturity, not this dimension's own specific content — read each level's own text below for what that shape means concretely at D5, D6, and so on.
-
----
-
-### INTELLIGENCE LAYER / D1–D3 / Inherited from the Shared Intelligence Layer / Converge at Level E
-
-D1 (Market discovery & definition), D2 (Buyer/user persona development), and D3 (Positioning & competitive intelligence) are inherited by reference from `shared_intelligence_layer.md` — the canonical, shared-with-SDLC source, ratified 2026-07-23. This matrix does not maintain its own copy of D1–D3; see that document for the full A–E ladder text for all three.
+D1 (Market discovery & definition), D2 (Buyer/user persona development), and D3 (Positioning & competitive intelligence) are inherited by reference from `shared_intelligence_layer.md` — the canonical source, ratified 2026-07-23. This matrix does not maintain its own copy of D1–D3; see that document for the full A–E ladder text for all three.
 
 PDLC-specific deltas on top of the shared text:
 
@@ -46,11 +41,9 @@ PDLC-specific deltas on top of the shared text:
 
 ---
 
-### SPECIFICATION LAYER / D4 / Diverges from SDLC by design
-
 #### D4. Requirements management
 
-**Type:** Shared origin, diverged content | **Note:** PDLC delta: traceability extends upstream to market/user signal (D1–D3) and downstream to portfolio investment (D8). The PM function owns this bridge. D1–D3 converge to genuinely identical language across SDLC/PDLC; D4 is where the divergence begins — different in kind, not degree (SDLC's D4 gates generation quality; PDLC's D4 gates portfolio investment and upstream/downstream traceability). Per that reasoning, D4 carries its own full ladder here rather than a shared-source reference.
+**Type:** Shared origin, diverged content | **Note:** PDLC delta: traceability extends upstream to market/user signal (D1–D3) and downstream to portfolio investment (D8). The PM function owns this bridge. D4 diverges from `STD-SDLC-MM` D4 in kind, not degree: PDLC's D4 gates portfolio investment and upstream/downstream traceability. Per that reasoning, D4 carries its own full ladder here rather than a shared-source reference.
 
 **Definition:** The capability to author precise, testable, machine-actionable specifications with full traceability from market/user signal through delivery, such that specification quality directly gates AI generation quality, verification coverage, and portfolio investment decisions.
 
@@ -64,11 +57,9 @@ PDLC-specific deltas on top of the shared text:
 
 ---
 
-### PM-NATIVE DIMENSIONS / D5–D11 / No SDLC equivalent
-
 #### D5. Prioritization & tradeoffs
 
-**Type:** Model-native | **Note:** See also the AI-Native Portfolio Prioritization Maturity Model (standalone), which elaborates this dimension at sub-dimension depth.
+**Type:** Model-native | **Note:** See also `STD-PRIORITIZATION-MM`.
 
 **Definition:** The capability to make and maintain explicit, AI-assisted investment decisions across a contested backlog, with documented tradeoff rationale continuously reconciled against market intelligence, portfolio thresholds, and outcome signals.
 
@@ -152,7 +143,7 @@ PDLC-specific deltas on top of the shared text:
 
 #### D11. Analytics & outcome measurement
 
-**Type:** Model-native | **Note:** This is the PM-function view of instrumentation — product outcome measurement, not delivery-system observability (that is SDLC's own D12). Failure classification vocabulary at Level D is borrowed from the AI-Native Portfolio Prioritization Maturity Model.
+**Type:** Model-native | **Note:** This is the PM-function view of instrumentation — product outcome measurement, not delivery-system observability (`STD-SDLC-MM` D12). Failure classification vocabulary at Level D is borrowed from `STD-PRIORITIZATION-MM`.
 
 **Definition:** The capability to continuously measure whether PM decisions are producing intended results — revenue impact, adoption, retention, customer satisfaction — and feed those signals back into upstream dimensions as a closed loop.
 
@@ -166,11 +157,9 @@ PDLC-specific deltas on top of the shared text:
 
 ---
 
-### SYSTEM VELOCITY / D12 / S0 echo / Virtually identical to SDLC D13
-
 #### D12. Feedback loop velocity
 
-**Type:** Model-native (virtually identical in shape to SDLC's D13) | **Note:** PDLC's measurement frame is the full PDLC chain (D1–D11) rather than the engineering delivery chain. S0 echo: slow feedback is an existential threat; fast feedback is a going-concern advantage.
+**Type:** Model-native (compare `STD-SDLC-MM` D13) | **Note:** PDLC's measurement frame is the full PDLC chain (D1–D11) rather than the engineering delivery chain. Slow feedback is an existential threat; fast feedback is a going-concern advantage.
 
 **Definition:** The end-to-end cycle time from signal — market, user, outcome, competitive — to shipped and validated response, as a property of the whole PM system rather than any individual stage.
 

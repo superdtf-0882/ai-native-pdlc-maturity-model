@@ -1,14 +1,14 @@
 # AI-Native PDLC Maturity Model
 
-A maturity model for the Product Development Life Cycle (PDLC) — specifically, the Product Management function — in the age of AI-assisted work. Part of the same family as the [AI-Native SDLC Maturity Model](https://github.com/superdtf-0882/ai-native-sdlc-maturity-model), sharing that model's D1–D3 (market discovery, persona development, positioning & competitive intelligence) by direct reference rather than a duplicated copy.
+A maturity model for the Product Development Life Cycle (PDLC) — specifically, the Product Management function — in the age of AI-assisted work. It is one of the AI-native maturity models, and takes its D1–D3 (market discovery, persona development, positioning & competitive intelligence) from the family's shared intelligence layer by direct reference rather than a duplicated copy. For the family, see aimaturitymodels.com/models.
 
-**Versions.** The repository's release tag versions the repository; the model's own version line names the release that last changed its text. A release that changes only other files leaves the version line as it was.
+**Versions.** The release tag versions the repository, and the model's version line names the tag it is at, every release (STD-MODEL-PARTS v1.1 §4C). `CHANGELOG.md` says what each release changed.
 
 ## What this is
 
-12 dimensions (D1–D12), each scored on a five-level ladder (A–E) sharing one family-wide vocabulary — Nascent / Modeled / Continuous / Integral / Telemetric — locked across every model in this family. D1–D4 originate from or converge with the SDLC model; D5–D11 are PM-native, with no SDLC equivalent; D12 is this model's own feedback-loop-velocity dimension.
+12 dimensions (D1–D12), each scored on a five-level ladder (A–E) sharing the family's five level names — Nascent / Modeled / Continuous / Integral / Telemetric. D1–D3 come from the shared intelligence layer; D4–D12 are this model's own.
 
-See `ai_native_pdlc_maturity_model.md` for the full matrix — the source of truth for D4–D12. D1–D3 are sourced from [`shared_intelligence_layer.md`](https://github.com/superdtf-0882/ai-native-sdlc-maturity-model/blob/v1.4.0/shared_intelligence_layer.md) in the SDLC repo, not duplicated here.
+See `ai_native_pdlc_maturity_model.md` for the full matrix — the source of truth for D4–D12. D1–D3 are sourced from [`shared_intelligence_layer.md`](https://github.com/superdtf-0882/ai-native-sdlc-maturity-model/blob/v1.4.3/shared_intelligence_layer.md) in the SDLC repo, not duplicated here.
 
 ## Other files
 
