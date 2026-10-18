@@ -18,9 +18,10 @@
 # repo's root -- an empty diff means this compression is still current.
 
 # RE-VERIFIED 2026-10-17 against ab96015 (the text commit of v1.2.4): read by the family parser, D4-D12's definitions, levels, transitions, verification lines and sustainment are the same as at the cited v1.1.0 commit 67806c6; the notes changed at v1.2.1 and v1.2.4, and no cell compresses a note; the cells unchanged.
+# RE-VERIFIED 2026-10-17 against ecf8479 (the text commit of v1.2.5): layout only; the cells unchanged from v1.2.4.
 version: "1.0.0"
-source_matrix_version: "1.2.4"
-source_matrix_commit: "ab960150212a78c4136fcc43bdd32e5abaf83207"
+source_matrix_version: "1.2.5"
+source_matrix_commit: "ecf847950d47a4f2c9bd9f65723c8168f639a4ea"
 generated: "2026-07-28"
 
 dimensions:
