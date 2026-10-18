@@ -24,6 +24,8 @@ Dimensions are independently scored — an organization can be advanced in one d
 
 Each level is followed by the transition required to reach the next level, and a verification clause — a practical test of whether the destination state was actually reached, not just claimed. Level E is followed by a sustainment note instead of a further transition, since there is no Level F: at the top of the ladder, the work shifts from climbing to keeping the capability from quietly regressing.
 
+**Pre-AI and Exempt:** STD-EA-MM's text at v1.1.2, github.com/superdtf-0882/ai-native-ea-maturity-model.
+
 **Family position:** PDLC measures the Product Management function. D1–D3 are inherited by reference from `STD-SHARED-INTELLIGENCE`; D4–D12 are this model's own, D4 diverging from `STD-SDLC-MM` D4 and D12 echoing `STD-SDLC-MM` D13.
 
 
