@@ -17,9 +17,10 @@
 # Run `git diff v1.1.0 HEAD -- ai_native_pdlc_maturity_model.md` from this
 # repo's root -- an empty diff means this compression is still current.
 
+# RE-VERIFIED 2026-10-17 against ab96015 (the text commit of v1.2.4): read by the family parser, D4-D12's definitions, levels, transitions, verification lines and sustainment are the same as at the cited v1.1.0 commit 67806c6; the notes changed at v1.2.1 and v1.2.4, and no cell compresses a note; the cells unchanged.
 version: "1.0.0"
-source_matrix_version: "1.1.0"
-source_matrix_commit: "67806c6211c45b09eab5b05bb73d6b9d07fd9a0b"
+source_matrix_version: "1.2.4"
+source_matrix_commit: "ab960150212a78c4136fcc43bdd32e5abaf83207"
 generated: "2026-07-28"
 
 dimensions:
