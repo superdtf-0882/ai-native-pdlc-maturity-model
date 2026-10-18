@@ -1,6 +1,6 @@
 # AI-Native PDLC Maturity Model — Matrix
 
-**Version 1.2.4 — 2026-10-17** (a wording release under the model family's parts standard: the level names point to the family's one file of them, the model no longer describes the family's other models, D1–D3 stand under their own range heading with a basis line, and Pre-AI and Exempt are named by their source. No level, transition or verification changed; scores against v1.2.3 are unaffected. See `CHANGELOG.md`.)
+**Version 1.2.5 — 2026-10-17** (layout only, text-neutral under STD-MODEL-PARTS v1.1: each of D4–D12's tables is written in the model family's common form, with every cell kept word for word, the dimensions at the second heading level, and the reading rules take the family's common title. No level, transition or verification changed; scores against v1.2.4 are unaffected. See `CHANGELOG.md`.)
 
 This is the full A–E maturity matrix for the AI-Native PDLC Maturity Model — 12 dimensions (D1–D3 by reference, D4–D12 in full below), readable in-browser and directly usable as input to AI tools. **This markdown document is the source of truth for D4–D12.** D1–D3 are sourced from `shared_intelligence_layer.md`, not this file; D4 is this model's own (see D4's own note below).
 
@@ -16,7 +16,7 @@ Names, descriptions and the general shape: family_maturity_levels.md in github.c
 
 ---
 
-## How to read this matrix
+## How to read this model
 
 Each dimension below has a definition followed by a five-level maturity ladder (A through E). Levels describe **realistically adjacent states** — each step up implies a roughly costable set of changes, not "more AI, more thoroughly." A given level is not inherently good or bad; it is appropriate or inappropriate for an organization's size, regulatory context, and risk tolerance.
 
@@ -43,132 +43,474 @@ PDLC-specific deltas on top of the shared text:
 
 ---
 
-#### D4. Requirements management
+## D4. Requirements management
 
 **Type:** Shared origin, diverged content | **Note:** PDLC delta: traceability extends upstream to market/user signal (D1–D3) and downstream to portfolio investment (D8). The PM function owns this bridge. D4 diverges from `STD-SDLC-MM` D4 in kind, not degree: PDLC's D4 gates portfolio investment and upstream/downstream traceability. Per that reasoning, D4 carries its own full ladder here rather than a shared-source reference.
 
 **Definition:** The capability to author precise, testable, machine-actionable specifications with full traceability from market/user signal through delivery, such that specification quality directly gates AI generation quality, verification coverage, and portfolio investment decisions.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | Specifications are written informally with no consistent structure or format. Traceability from source signal to delivery is manual or absent. AI assistance is individual and unsystematic. | Adopt a consistent specification format and require AI assistance in drafting. Define the minimum fields (intent, acceptance criteria, source signal) and apply them uniformly. Establish a shared system of record with cross-functional access. | A teammate outside the original author can locate the current specification, its source signal, and its acceptance criteria without asking that author. |
-| B - Modeled | A consistent specification format is adopted and AI assists with drafting. The system of record is shared with cross-functional access (Product, Engineering, QA, Release Management), with UX designs and wireframes linked. Specifications are not yet machine-actionable — they require human interpretation before AI generation can act on them directly. | Make specifications machine-actionable. Define what machine-actionable means for your engineering context such that an AI generation tool can consume a specification without human reformulation. Begin building systematic traceability from market/user signal to specification. | An AI generation tool consumes a specification as written and produces a usable draft artifact without a person first restructuring or reformulating it. |
-| C - Continuous | Specifications are structured and machine-actionable. AI generation tools can consume them without human reformulation. Traceability from market/user signal to specification is maintained systematically. | Close bidirectional traceability from market/user signal through specification to delivered artifact. Automate flagging: when an upstream signal changes, affected specifications should surface without manual audit. Connect requirements to prioritization and portfolio investment as a live input. | When an upstream market/user signal changes, the specifications it affects are flagged automatically, without a person auditing the backlog to find them. |
-| D - Integral | Full bidirectional traceability from market/user signal through specification to delivered artifact is maintained automatically. When an upstream signal changes, affected specifications are flagged without manual audit. Specifications are a live asset consumed directly by prioritization, portfolio investment, and engineering. | Make the requirements layer self-maintaining. The system should continuously reconcile specifications against upstream intelligence and downstream delivery signal, surfacing gaps and conflicts without manual review cycles. | Specifications reconcile against upstream and downstream signal on their own cadence, and a genuine conflict surfaces without a scheduled review triggering the check. |
-| E - Telemetric | Specification quality and traceability are self-maintaining — the requirements layer continuously reconciles against upstream intelligence and downstream delivery signal, surfacing gaps and conflicts without manual audit. PM work shifts from authoring to reviewing AI-surfaced conflicts and ratifying resolutions. | Sustain: verify that the self-maintaining requirements layer is surfacing genuine conflicts rather than generating noise, and that ratification is meaningfully improving on AI-surfaced recommendations. | — |
+### A — Nascent
+
+Specifications are written informally with no consistent structure or format. Traceability from source signal to delivery is manual or absent. AI assistance is individual and unsystematic.
+
+**Transition from A to B**
+
+Adopt a consistent specification format and require AI assistance in drafting. Define the minimum fields (intent, acceptance criteria, source signal) and apply them uniformly. Establish a shared system of record with cross-functional access.
+
+**Verification:** A teammate outside the original author can locate the current specification, its source signal, and its acceptance criteria without asking that author.
+
+### B — Modeled
+
+A consistent specification format is adopted and AI assists with drafting. The system of record is shared with cross-functional access (Product, Engineering, QA, Release Management), with UX designs and wireframes linked. Specifications are not yet machine-actionable — they require human interpretation before AI generation can act on them directly.
+
+**Transition from B to C**
+
+Make specifications machine-actionable. Define what machine-actionable means for your engineering context such that an AI generation tool can consume a specification without human reformulation. Begin building systematic traceability from market/user signal to specification.
+
+**Verification:** An AI generation tool consumes a specification as written and produces a usable draft artifact without a person first restructuring or reformulating it.
+
+### C — Continuous
+
+Specifications are structured and machine-actionable. AI generation tools can consume them without human reformulation. Traceability from market/user signal to specification is maintained systematically.
+
+**Transition from C to D**
+
+Close bidirectional traceability from market/user signal through specification to delivered artifact. Automate flagging: when an upstream signal changes, affected specifications should surface without manual audit. Connect requirements to prioritization and portfolio investment as a live input.
+
+**Verification:** When an upstream market/user signal changes, the specifications it affects are flagged automatically, without a person auditing the backlog to find them.
+
+### D — Integral
+
+Full bidirectional traceability from market/user signal through specification to delivered artifact is maintained automatically. When an upstream signal changes, affected specifications are flagged without manual audit. Specifications are a live asset consumed directly by prioritization, portfolio investment, and engineering.
+
+**Transition from D to E**
+
+Make the requirements layer self-maintaining. The system should continuously reconcile specifications against upstream intelligence and downstream delivery signal, surfacing gaps and conflicts without manual review cycles.
+
+**Verification:** Specifications reconcile against upstream and downstream signal on their own cadence, and a genuine conflict surfaces without a scheduled review triggering the check.
+
+### E — Telemetric
+
+Specification quality and traceability are self-maintaining — the requirements layer continuously reconciles against upstream intelligence and downstream delivery signal, surfacing gaps and conflicts without manual audit. PM work shifts from authoring to reviewing AI-surfaced conflicts and ratifying resolutions.
+
+**Sustainment:** Sustain: verify that the self-maintaining requirements layer is surfacing genuine conflicts rather than generating noise, and that ratification is meaningfully improving on AI-surfaced recommendations.
 
 ---
 
-#### D5. Prioritization & tradeoffs
+## D5. Prioritization & tradeoffs
 
 **Type:** Model-native | **Note:** See also `STD-PRIORITIZATION-MM`.
 
 **Definition:** The capability to make and maintain explicit, AI-assisted investment decisions across a contested backlog, with documented tradeoff rationale continuously reconciled against market intelligence, portfolio thresholds, and outcome signals.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | Prioritization is an informal, recurring negotiation — no consistent framework, no documented tradeoff rationale, and no stable authority over who decides. The backlog reflects whoever argued most recently rather than deliberate investment logic. | Name a consistent prioritization method and require documented tradeoff rationale for every contested priority decision. | Any stakeholder can reconstruct why the backlog is ordered the way it is without asking the PM. |
-| B - Modeled | Prioritization is a formalized, recurring activity with the elements of a framework and explicit ties to strategy. Formal decision roles exist, but financial expedience is the clear arbiter in contested priorities. | Adopt a consistent prioritization framework with defined decision roles. Require documented tradeoff rationale for every contested priority decision — even when financial expedience is the outcome. | A contested decision from the current cycle has documented tradeoff rationale on file, even where financial expedience was the deciding factor. |
-| C - Continuous | Prioritization is a formalized event occurring on a cadence more frequent than release. A strategic prioritization framework accounts for current commitments, technical debt, and aspirational market goals. Decision authority is defined, but not yet tightly linked to budget authority. | Tie decision authority explicitly to budget authority. Require the prioritization framework to account for current D1-D3 market intelligence and D4 requirements state at each cadence. | A prioritization cycle can be shown to have used current D1-D3 intelligence and D4 requirements state, not a stale snapshot from an earlier cycle. |
-| D - Integral | Prioritization is a continuous or automatically intervalic activity governed by a constituted framework ratified by key business stakeholders. Current business, market, and customer intelligence actively informs prioritization. Decision authority is explicit and linked to budget authority. | Connect prioritization to D8 (portfolio investment) and D11 (outcome signals) as live inputs. AI should surface prioritization recommendations; the PM function ratifies or overrides with documented reasoning. | An AI-surfaced prioritization recommendation exists for a real decision, with the PM's ratification or override reasoning recorded alongside it. |
-| E - Telemetric | Prioritization decisions are AI-assisted, continuously maintained, and fully traceable — every item in the portfolio carries documented tradeoff rationale tied to D1-D3 intelligence, D8 investment thresholds, and D11 outcome signals. PM work shifts from arguing for priorities to ratifying AI-surfaced recommendations and deciding on genuinely novel tradeoffs the model cannot resolve. | Sustain: verify that AI-surfaced prioritization recommendations are improving decision quality, not merely accelerating existing biases. Audit tradeoff rationale periodically for systematic patterns that may indicate model drift or authority creep. | — |
+### A — Nascent
 
-#### D6. Executive engagement & authority
+Prioritization is an informal, recurring negotiation — no consistent framework, no documented tradeoff rationale, and no stable authority over who decides. The backlog reflects whoever argued most recently rather than deliberate investment logic.
+
+**Transition from A to B**
+
+Name a consistent prioritization method and require documented tradeoff rationale for every contested priority decision.
+
+**Verification:** Any stakeholder can reconstruct why the backlog is ordered the way it is without asking the PM.
+
+### B — Modeled
+
+Prioritization is a formalized, recurring activity with the elements of a framework and explicit ties to strategy. Formal decision roles exist, but financial expedience is the clear arbiter in contested priorities.
+
+**Transition from B to C**
+
+Adopt a consistent prioritization framework with defined decision roles. Require documented tradeoff rationale for every contested priority decision — even when financial expedience is the outcome.
+
+**Verification:** A contested decision from the current cycle has documented tradeoff rationale on file, even where financial expedience was the deciding factor.
+
+### C — Continuous
+
+Prioritization is a formalized event occurring on a cadence more frequent than release. A strategic prioritization framework accounts for current commitments, technical debt, and aspirational market goals. Decision authority is defined, but not yet tightly linked to budget authority.
+
+**Transition from C to D**
+
+Tie decision authority explicitly to budget authority. Require the prioritization framework to account for current D1-D3 market intelligence and D4 requirements state at each cadence.
+
+**Verification:** A prioritization cycle can be shown to have used current D1-D3 intelligence and D4 requirements state, not a stale snapshot from an earlier cycle.
+
+### D — Integral
+
+Prioritization is a continuous or automatically intervalic activity governed by a constituted framework ratified by key business stakeholders. Current business, market, and customer intelligence actively informs prioritization. Decision authority is explicit and linked to budget authority.
+
+**Transition from D to E**
+
+Connect prioritization to D8 (portfolio investment) and D11 (outcome signals) as live inputs. AI should surface prioritization recommendations; the PM function ratifies or overrides with documented reasoning.
+
+**Verification:** An AI-surfaced prioritization recommendation exists for a real decision, with the PM's ratification or override reasoning recorded alongside it.
+
+### E — Telemetric
+
+Prioritization decisions are AI-assisted, continuously maintained, and fully traceable — every item in the portfolio carries documented tradeoff rationale tied to D1-D3 intelligence, D8 investment thresholds, and D11 outcome signals. PM work shifts from arguing for priorities to ratifying AI-surfaced recommendations and deciding on genuinely novel tradeoffs the model cannot resolve.
+
+**Sustainment:** Sustain: verify that AI-surfaced prioritization recommendations are improving decision quality, not merely accelerating existing biases. Audit tradeoff rationale periodically for systematic patterns that may indicate model drift or authority creep.
+
+## D6. Executive engagement & authority
 
 **Type:** Model-native | **Note:** The progression describes consolidation of structural authority. Authority is maintained structurally, not won through ongoing conflict.
 
 **Definition:** The capability to maintain structural authority over portfolio, roadmap, pricing, and release scope decisions through a governed executive interface cadence — where authority is maintained, not negotiated.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | Authority over portfolio, roadmap, pricing, and release scope is diffuse — held informally by whoever has organizational leverage at a given moment (Sales, Finance, Engineering, individual executives). Product Management coordinates rather than decides. | Establish a recurring executive interface cadence with defined agenda, documented decisions, and named PM authority for roadmap and prioritization. | Every roadmap or prioritization decision from the current cadence can be traced to a named owner without asking who made it. |
-| B - Modeled | Authority over portfolio, roadmap, pricing, and release scope is guided by Product Management, but ultimate authority continues to be held by senior leadership. The function is no longer whipsawed by peer organizations — Sales, Finance, and Engineering are no longer contesting day-to-day product decisions — but PM operates under ratification rather than independent mandate. | Formalize the scope of PM authority explicitly — document which decisions PM makes independently, which require ratification, and which require approval. | A contested decision can be resolved by referencing the authority document, not by convening a stakeholder meeting. |
-| C - Continuous | Authority over portfolio, roadmap, pricing, and release scope is held by Product Management and ratified by senior leadership. PM defines the terms of decisions; leadership approves rather than initiates. The scope of unilateral PM authority is explicit and documented, even where it remains narrow. | Remove ratification requirements from day-to-day portfolio, roadmap, and pricing decisions. Reserve senior leadership engagement for portfolio-level strategic conflicts and fiduciary exceptions. | PM can make and execute a significant roadmap or pricing decision without waiting for an approval cycle. |
-| D - Integral | Product Management holds portfolio, roadmap, pricing, and release scope authority on its own terms. Decisions are transparent, documented, and supportable without requiring executive defense. The executive interface cadence governs strategic alignment and exception handling — it is the arena for surfacing conflicts PM cannot resolve unilaterally, not the mechanism by which authority is granted or withheld. | Instrument decision transparency so that the basis for every major PM decision is visible and auditable to executive stakeholders without a dedicated briefing. | The basis for a major PM decision is visible to an executive stakeholder without that stakeholder requesting a dedicated briefing. |
-| E - Telemetric | Authority is structurally maintained by the PM function, with AI-assisted transparency making the basis for every major decision visible and auditable to executive stakeholders in real time — executive engagement is no longer about securing permission or defending decisions, but about surfacing strategic conflicts PM cannot resolve unilaterally and ensuring fiduciary alignment at the portfolio level. | Sustain: verify that AI-assisted transparency is genuinely informing executive judgment rather than creating audit theatre. Test periodically whether the executive interface cadence is surfacing real strategic conflicts or smoothing them over. | — |
+### A — Nascent
 
-#### D7. Organizational evangelism & alignment
+Authority over portfolio, roadmap, pricing, and release scope is diffuse — held informally by whoever has organizational leverage at a given moment (Sales, Finance, Engineering, individual executives). Product Management coordinates rather than decides.
+
+**Transition from A to B**
+
+Establish a recurring executive interface cadence with defined agenda, documented decisions, and named PM authority for roadmap and prioritization.
+
+**Verification:** Every roadmap or prioritization decision from the current cadence can be traced to a named owner without asking who made it.
+
+### B — Modeled
+
+Authority over portfolio, roadmap, pricing, and release scope is guided by Product Management, but ultimate authority continues to be held by senior leadership. The function is no longer whipsawed by peer organizations — Sales, Finance, and Engineering are no longer contesting day-to-day product decisions — but PM operates under ratification rather than independent mandate.
+
+**Transition from B to C**
+
+Formalize the scope of PM authority explicitly — document which decisions PM makes independently, which require ratification, and which require approval.
+
+**Verification:** A contested decision can be resolved by referencing the authority document, not by convening a stakeholder meeting.
+
+### C — Continuous
+
+Authority over portfolio, roadmap, pricing, and release scope is held by Product Management and ratified by senior leadership. PM defines the terms of decisions; leadership approves rather than initiates. The scope of unilateral PM authority is explicit and documented, even where it remains narrow.
+
+**Transition from C to D**
+
+Remove ratification requirements from day-to-day portfolio, roadmap, and pricing decisions. Reserve senior leadership engagement for portfolio-level strategic conflicts and fiduciary exceptions.
+
+**Verification:** PM can make and execute a significant roadmap or pricing decision without waiting for an approval cycle.
+
+### D — Integral
+
+Product Management holds portfolio, roadmap, pricing, and release scope authority on its own terms. Decisions are transparent, documented, and supportable without requiring executive defense. The executive interface cadence governs strategic alignment and exception handling — it is the arena for surfacing conflicts PM cannot resolve unilaterally, not the mechanism by which authority is granted or withheld.
+
+**Transition from D to E**
+
+Instrument decision transparency so that the basis for every major PM decision is visible and auditable to executive stakeholders without a dedicated briefing.
+
+**Verification:** The basis for a major PM decision is visible to an executive stakeholder without that stakeholder requesting a dedicated briefing.
+
+### E — Telemetric
+
+Authority is structurally maintained by the PM function, with AI-assisted transparency making the basis for every major decision visible and auditable to executive stakeholders in real time — executive engagement is no longer about securing permission or defending decisions, but about surfacing strategic conflicts PM cannot resolve unilaterally and ensuring fiduciary alignment at the portfolio level.
+
+**Sustainment:** Sustain: verify that AI-assisted transparency is genuinely informing executive judgment rather than creating audit theatre. Test periodically whether the executive interface cadence is surfacing real strategic conflicts or smoothing them over.
+
+## D7. Organizational evangelism & alignment
 
 **Type:** Model-native | **Note:** AI-assisted, not AI-defined. Not every level transition is defined by AI depth — this dimension tracks organizational reach and coherence.
 
 **Definition:** The capability to propagate product direction continuously and at appropriate fidelity across organizational functions — Engineering, GTM, Leadership — and to surface misalignment signals proactively.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | Product direction is communicated reactively and inconsistently — teams learn about roadmap decisions when they affect their work, not in advance. Alignment is achieved through repeated one-on-one conversations rather than any systematic mechanism. | Establish a recurring product direction communication cadence with a consistent format. Define the minimum information Engineering, GTM, and Leadership each need. | Engineering, GTM, and Leadership can each name the current product direction without checking with the PM directly. |
-| B - Modeled | Product direction is communicated on a defined cadence using consistent artifacts (e.g., roadmap reviews, all-hands updates, written strategy documents). AI assists in drafting and formatting these artifacts but delivery remains manual and audience-undifferentiated. | Differentiate communication by audience. Engineering, GTM, and Leadership should each receive a rendering of product direction at the fidelity appropriate to their function. | Each audience can act on what they receive without requesting clarification. |
-| C - Continuous | Product direction is communicated in audience-differentiated form — Engineering receives specification-level context, GTM receives positioning-level context, Leadership receives portfolio-level context. AI assists in producing these differentiated renderings from shared source artifacts, but the propagation cadence remains event-driven rather than continuous. | Move from event-driven to continuous propagation. Product direction artifacts should update as PM artifacts update. | A material roadmap change propagates to all audiences within a defined timeframe without a manual communication step. |
-| D - Integral | Product direction propagation becomes continuous rather than event-driven. AI produces audience-differentiated renderings from the current PM artifact set on an ongoing basis. Misalignment detection remains reactive — teams flag inconsistencies when they surface rather than the system surfacing them proactively. | Add proactive misalignment detection. The system should surface when a team is acting inconsistently with current product direction before that inconsistency becomes a costly handoff failure. | A team's inconsistency with current product direction is flagged by the system before it becomes a costly handoff failure, not after. |
-| E - Telemetric | Product direction is continuously and automatically propagated across the organization at appropriate fidelity for each audience — all renderings derived from the same underlying PM artifacts without manual reformulation. Misalignment signals are surfaced proactively rather than discovered at handoff. | Sustain: verify that automated propagation is accurately representing current product direction and that misalignment detection is surfacing genuine signals rather than noise. | — |
+### A — Nascent
 
-#### D8. Portfolio & investment management
+Product direction is communicated reactively and inconsistently — teams learn about roadmap decisions when they affect their work, not in advance. Alignment is achieved through repeated one-on-one conversations rather than any systematic mechanism.
+
+**Transition from A to B**
+
+Establish a recurring product direction communication cadence with a consistent format. Define the minimum information Engineering, GTM, and Leadership each need.
+
+**Verification:** Engineering, GTM, and Leadership can each name the current product direction without checking with the PM directly.
+
+### B — Modeled
+
+Product direction is communicated on a defined cadence using consistent artifacts (e.g., roadmap reviews, all-hands updates, written strategy documents). AI assists in drafting and formatting these artifacts but delivery remains manual and audience-undifferentiated.
+
+**Transition from B to C**
+
+Differentiate communication by audience. Engineering, GTM, and Leadership should each receive a rendering of product direction at the fidelity appropriate to their function.
+
+**Verification:** Each audience can act on what they receive without requesting clarification.
+
+### C — Continuous
+
+Product direction is communicated in audience-differentiated form — Engineering receives specification-level context, GTM receives positioning-level context, Leadership receives portfolio-level context. AI assists in producing these differentiated renderings from shared source artifacts, but the propagation cadence remains event-driven rather than continuous.
+
+**Transition from C to D**
+
+Move from event-driven to continuous propagation. Product direction artifacts should update as PM artifacts update.
+
+**Verification:** A material roadmap change propagates to all audiences within a defined timeframe without a manual communication step.
+
+### D — Integral
+
+Product direction propagation becomes continuous rather than event-driven. AI produces audience-differentiated renderings from the current PM artifact set on an ongoing basis. Misalignment detection remains reactive — teams flag inconsistencies when they surface rather than the system surfacing them proactively.
+
+**Transition from D to E**
+
+Add proactive misalignment detection. The system should surface when a team is acting inconsistently with current product direction before that inconsistency becomes a costly handoff failure.
+
+**Verification:** A team's inconsistency with current product direction is flagged by the system before it becomes a costly handoff failure, not after.
+
+### E — Telemetric
+
+Product direction is continuously and automatically propagated across the organization at appropriate fidelity for each audience — all renderings derived from the same underlying PM artifacts without manual reformulation. Misalignment signals are surfaced proactively rather than discovered at handoff.
+
+**Sustainment:** Sustain: verify that automated propagation is accurately representing current product direction and that misalignment detection is surfacing genuine signals rather than noise.
+
+## D8. Portfolio & investment management
 
 **Type:** Model-native | **Note:** Applies in this model because the PM function owns the P&L.
 
 **Definition:** The capability to make start/stop/scale decisions across the product portfolio with explicit AI-assisted investment modeling, continuously reconciled against market intelligence and outcome data.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | Portfolio decisions (start, stop, scale) are made episodically at planning cycles, based on subjective assessment rather than explicit investment models, with no systematic tracking of whether prior portfolio bets produced expected returns. | Establish a consistent investment framework for portfolio decisions. Define what information is required to make a start/stop/scale decision and require that information for every portfolio decision. Begin recording the expected return basis for every portfolio bet. | A portfolio decision from the current planning cycle records the expected return basis it was made against, not just the decision itself. |
-| B - Modeled | Portfolio decisions are made at defined planning cycles using a consistent investment framework. AI assists in assembling investment cases and summarizing portfolio state, but decisions are based primarily on qualitative judgment — no systematic tracking of prior portfolio bet outcomes. | Connect the portfolio framework to D1-D3 market intelligence and D4 requirements state as explicit inputs. AI should support scenario modeling across portfolio options. Begin tracking whether prior portfolio bets are producing expected returns. | When an outcome signal materially changes the expected return of a portfolio bet, the portfolio framework surfaces that change without a manual review being triggered. |
-| C - Continuous | Portfolio decisions are made using a framework that explicitly incorporates current market intelligence (D1-D3) and requirements state (D4). AI supports scenario modeling across portfolio options. Tracking of prior portfolio bet outcomes begins, but feedback from outcomes into future investment decisions is manual and episodic. | Close the feedback loop from D11 (outcome measurement) into portfolio investment modeling. | An AI-surfaced investment recommendation exists that required only ratification or override, not manual assembly of the underlying case. |
-| D - Integral | Portfolio investment decisions are continuously modeled against D1-D3 market intelligence and D5 prioritization signals. Prior outcome data (D11) begins feeding into investment modeling automatically, though investment recommendations are AI-surfaced but require significant human assembly before they are decision-ready. Start/stop/scale triggers are defined but remain calendar-driven rather than signal-driven. | Move start/stop/scale triggers from calendar-driven to signal-driven. AI-surfaced investment recommendations should be decision-ready — the PM function's work shifts from assembling the investment case to ratifying or overriding with documented reasoning. | A start/stop/scale decision can be shown to have been triggered by a signal, not by the arrival of a calendar date. |
-| E - Telemetric | Portfolio investment decisions are continuously modeled against D1-D3 market intelligence, D11 outcome data, and D5 prioritization signals — start/stop/scale decisions are triggered by signal rather than calendar, with AI-surfaced investment recommendations that PM ratifies or overrides with documented reasoning. Portfolio health is a standing metric visible to executive stakeholders (D6) without manual assembly. | Sustain: verify that signal-triggered portfolio decisions are preserving strategic coherence and that AI-surfaced recommendations are improving investment quality, not merely accelerating decisions. | — |
+### A — Nascent
 
-#### D9. GTM cadence & market activation
+Portfolio decisions (start, stop, scale) are made episodically at planning cycles, based on subjective assessment rather than explicit investment models, with no systematic tracking of whether prior portfolio bets produced expected returns.
+
+**Transition from A to B**
+
+Establish a consistent investment framework for portfolio decisions. Define what information is required to make a start/stop/scale decision and require that information for every portfolio decision. Begin recording the expected return basis for every portfolio bet.
+
+**Verification:** A portfolio decision from the current planning cycle records the expected return basis it was made against, not just the decision itself.
+
+### B — Modeled
+
+Portfolio decisions are made at defined planning cycles using a consistent investment framework. AI assists in assembling investment cases and summarizing portfolio state, but decisions are based primarily on qualitative judgment — no systematic tracking of prior portfolio bet outcomes.
+
+**Transition from B to C**
+
+Connect the portfolio framework to D1-D3 market intelligence and D4 requirements state as explicit inputs. AI should support scenario modeling across portfolio options. Begin tracking whether prior portfolio bets are producing expected returns.
+
+**Verification:** When an outcome signal materially changes the expected return of a portfolio bet, the portfolio framework surfaces that change without a manual review being triggered.
+
+### C — Continuous
+
+Portfolio decisions are made using a framework that explicitly incorporates current market intelligence (D1-D3) and requirements state (D4). AI supports scenario modeling across portfolio options. Tracking of prior portfolio bet outcomes begins, but feedback from outcomes into future investment decisions is manual and episodic.
+
+**Transition from C to D**
+
+Close the feedback loop from D11 (outcome measurement) into portfolio investment modeling.
+
+**Verification:** An AI-surfaced investment recommendation exists that required only ratification or override, not manual assembly of the underlying case.
+
+### D — Integral
+
+Portfolio investment decisions are continuously modeled against D1-D3 market intelligence and D5 prioritization signals. Prior outcome data (D11) begins feeding into investment modeling automatically, though investment recommendations are AI-surfaced but require significant human assembly before they are decision-ready. Start/stop/scale triggers are defined but remain calendar-driven rather than signal-driven.
+
+**Transition from D to E**
+
+Move start/stop/scale triggers from calendar-driven to signal-driven. AI-surfaced investment recommendations should be decision-ready — the PM function's work shifts from assembling the investment case to ratifying or overriding with documented reasoning.
+
+**Verification:** A start/stop/scale decision can be shown to have been triggered by a signal, not by the arrival of a calendar date.
+
+### E — Telemetric
+
+Portfolio investment decisions are continuously modeled against D1-D3 market intelligence, D11 outcome data, and D5 prioritization signals — start/stop/scale decisions are triggered by signal rather than calendar, with AI-surfaced investment recommendations that PM ratifies or overrides with documented reasoning. Portfolio health is a standing metric visible to executive stakeholders (D6) without manual assembly.
+
+**Sustainment:** Sustain: verify that signal-triggered portfolio decisions are preserving strategic coherence and that AI-surfaced recommendations are improving investment quality, not merely accelerating decisions.
+
+## D9. GTM cadence & market activation
 
 **Type:** Model-native | **Note:** Includes pricing maturity arc.
 
 **Definition:** The capability to continuously move product positioning, pricing, messaging, and provisioning decisions from the PM function to market-facing execution — as a continuously maintained model rather than a launch event.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | GTM execution is episodic and launch-driven — positioning, pricing, and messaging are set at launch, revisited only for major releases, and produced by separate functions (Marketing, Sales, Finance) without a shared PM-owned model driving them. | Establish a GTM cadence tied to release milestones. Define the minimum PM-owned artifacts that drive GTM activation (positioning statement, pricing rationale, messaging brief) and require them for every release. | The positioning statement, pricing rationale, and messaging brief driving the current release all originate from the same PM-owned source, not independently produced by each market-facing function. |
-| B - Modeled | GTM execution runs on a defined cadence tied to release milestones. Positioning, pricing, and messaging are updated at each release using a consistent AI-assisted process. Market-facing functions are briefed from PM-owned artifacts, but produce their own renderings independently. | Build a shared PM-owned model that drives positioning, pricing, and messaging across all market-facing functions from the same source. | A competitive move triggers a GTM model update without requiring a new release. |
-| C - Continuous | A shared PM-owned model drives positioning, pricing, and messaging across market-facing functions. AI assists in producing function-specific renderings (Sales battlecards, Marketing messaging briefs, pricing rationale) from the shared model. GTM updates remain milestone-triggered rather than continuous. | Move from milestone-triggered to signal-responsive GTM. The shared model should begin updating in response to D1-D3 intelligence signals rather than only at release boundaries. | Pricing has been reviewed and updated in response to a market signal since the last release, not only at the release boundary itself. |
-| D - Integral | GTM activation becomes push/pull rather than milestone-triggered. Pricing intelligence is continuously available and informs GTM positioning on a formalized but ongoing basis — pricing is no longer set once per release but reviewed and updated in response to market signals on a defined cadence. Market-facing functions can pull current positioning, pricing, and messaging from the shared model on demand, or receive pushed updates when material signals trigger a GTM review. | Move from formalized continuous pricing review to near-real-time pricing response. Eliminate the remaining dependency on a defined cadence — GTM model updates should be triggered by D1-D3 signals and D11 outcome data directly, without a human scheduling a review. | A GTM model update can be shown to have been triggered directly by a D1-D3 signal or D11 outcome data, without a human scheduling the review that produced it. |
-| E - Telemetric | Positioning, pricing, messaging, and provisioning are continuously maintained by a shared AI-driven model fed by D1-D3 intelligence and D11 outcome data — market-facing functions consume function-specific renderings from the same underlying model rather than commissioning separate work. Pricing responds to competitive signals and willingness-to-pay data in near-real-time. GTM activation for a new capability is not a launch event but a continuous adjustment. | Sustain: verify that continuous GTM activation is preserving positioning coherence across all market-facing functions and that near-real-time pricing is improving revenue outcomes without eroding market trust. | — |
+### A — Nascent
 
-#### D10. Experimentation & validation
+GTM execution is episodic and launch-driven — positioning, pricing, and messaging are set at launch, revisited only for major releases, and produced by separate functions (Marketing, Sales, Finance) without a shared PM-owned model driving them.
+
+**Transition from A to B**
+
+Establish a GTM cadence tied to release milestones. Define the minimum PM-owned artifacts that drive GTM activation (positioning statement, pricing rationale, messaging brief) and require them for every release.
+
+**Verification:** The positioning statement, pricing rationale, and messaging brief driving the current release all originate from the same PM-owned source, not independently produced by each market-facing function.
+
+### B — Modeled
+
+GTM execution runs on a defined cadence tied to release milestones. Positioning, pricing, and messaging are updated at each release using a consistent AI-assisted process. Market-facing functions are briefed from PM-owned artifacts, but produce their own renderings independently.
+
+**Transition from B to C**
+
+Build a shared PM-owned model that drives positioning, pricing, and messaging across all market-facing functions from the same source.
+
+**Verification:** A competitive move triggers a GTM model update without requiring a new release.
+
+### C — Continuous
+
+A shared PM-owned model drives positioning, pricing, and messaging across market-facing functions. AI assists in producing function-specific renderings (Sales battlecards, Marketing messaging briefs, pricing rationale) from the shared model. GTM updates remain milestone-triggered rather than continuous.
+
+**Transition from C to D**
+
+Move from milestone-triggered to signal-responsive GTM. The shared model should begin updating in response to D1-D3 intelligence signals rather than only at release boundaries.
+
+**Verification:** Pricing has been reviewed and updated in response to a market signal since the last release, not only at the release boundary itself.
+
+### D — Integral
+
+GTM activation becomes push/pull rather than milestone-triggered. Pricing intelligence is continuously available and informs GTM positioning on a formalized but ongoing basis — pricing is no longer set once per release but reviewed and updated in response to market signals on a defined cadence. Market-facing functions can pull current positioning, pricing, and messaging from the shared model on demand, or receive pushed updates when material signals trigger a GTM review.
+
+**Transition from D to E**
+
+Move from formalized continuous pricing review to near-real-time pricing response. Eliminate the remaining dependency on a defined cadence — GTM model updates should be triggered by D1-D3 signals and D11 outcome data directly, without a human scheduling a review.
+
+**Verification:** A GTM model update can be shown to have been triggered directly by a D1-D3 signal or D11 outcome data, without a human scheduling the review that produced it.
+
+### E — Telemetric
+
+Positioning, pricing, messaging, and provisioning are continuously maintained by a shared AI-driven model fed by D1-D3 intelligence and D11 outcome data — market-facing functions consume function-specific renderings from the same underlying model rather than commissioning separate work. Pricing responds to competitive signals and willingness-to-pay data in near-real-time. GTM activation for a new capability is not a launch event but a continuous adjustment.
+
+**Sustainment:** Sustain: verify that continuous GTM activation is preserving positioning coherence across all market-facing functions and that near-real-time pricing is improving revenue outcomes without eroding market trust.
+
+## D10. Experimentation & validation
 
 **Type:** Model-native | **Note:** Subsumption principle — at Level E, this activity is subsumed into the main delivery and feedback cycle. Level E is not better prototyping — it is the disappearance of the prototype track as a distinct practice.
 
 **Definition:** The capability to define hypotheses, design MVPs/increments, validate against market signals, and close the learning loop back to requirements and portfolio decisions.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | Prototyping and market validation are ad hoc — initiated informally when someone decides they are needed, not connected to a systematic hypothesis framework, and producing findings that are rarely captured in a form that feeds back into requirements or portfolio decisions. | Establish a hypothesis documentation standard for all prototyping and market validation work. Every experiment should state its hypothesis, success criteria, and intended destination (which D4 requirement or D8 portfolio decision it is intended to inform) before it begins. | A prototyping or validation effort in flight has a stated hypothesis, success criteria, and intended destination on record before it concludes, not reconstructed after the fact. |
-| B - Modeled | Prototyping and market validation run on a defined process with explicit hypothesis documentation. AI assists in synthesizing validation findings and comparing outcomes against hypotheses. The parallel track remains clearly separate from production delivery — findings must be manually reformulated into D4 requirements before engineering can act on them. | Connect validation findings directly to D4 (requirements) without manual reformulation. AI should assist in translating validated hypotheses into specification-ready form. | A validated hypothesis can move into engineering without a separate requirements-authoring step. |
-| C - Continuous | The parallel prototype track is formally integrated with the main delivery cycle — validated hypotheses flow directly into D4 (requirements) without manual reformulation, and the prioritization framework (D5) treats validation findings as first-class inputs. AI assists in accelerating prototype construction and synthesizing market signals. The parallel track remains distinct but its output latency is visibly shorter than at Level B. | Reduce the cycle time of the parallel track until it approaches the cadence of the main delivery cycle. | The elapsed time from hypothesis to validated finding is measured and trending toward the main delivery cycle time. |
-| D - Integral | The velocity of the parallel prototype track matches or approaches the main delivery cycle — at this level the distinction between prototype and production-ready begins to dissolve as a practical matter. When a hypothesis is validated, the prototype artifact is often production-worthy by the time validation is complete, and the decision of whether to promote it or discard it is a product decision, not a technical one. The parallel track still exists as a named practice, but its output is indistinguishable in quality and cadence from the main track. | Remove the named distinction between the prototype track and the main delivery cycle. At Level E, hypotheses enter D4 (requirements) directly — there is no separate prototype intake path. | The organization cannot point to a prototype environment or a validation sprint as distinct from its normal delivery motion. |
-| E - Telemetric | The experimentation and validation activity has been subsumed into the main delivery and feedback cycle — there is no separate prototype track. A well-formed hypothesis enters D4 (requirements), moves through D5 (prioritization), ships, and is validated by D11 (outcome measurement) within the same cycle time D12 measures. | Sustain: verify that the subsumption of the parallel track is a consequence of cycle time maturity and not a result of abandoning validation discipline. Hypotheses are still being formally stated and evaluated — they are simply moving through the main track rather than a parallel one. | — |
+### A — Nascent
 
-#### D11. Analytics & outcome measurement
+Prototyping and market validation are ad hoc — initiated informally when someone decides they are needed, not connected to a systematic hypothesis framework, and producing findings that are rarely captured in a form that feeds back into requirements or portfolio decisions.
+
+**Transition from A to B**
+
+Establish a hypothesis documentation standard for all prototyping and market validation work. Every experiment should state its hypothesis, success criteria, and intended destination (which D4 requirement or D8 portfolio decision it is intended to inform) before it begins.
+
+**Verification:** A prototyping or validation effort in flight has a stated hypothesis, success criteria, and intended destination on record before it concludes, not reconstructed after the fact.
+
+### B — Modeled
+
+Prototyping and market validation run on a defined process with explicit hypothesis documentation. AI assists in synthesizing validation findings and comparing outcomes against hypotheses. The parallel track remains clearly separate from production delivery — findings must be manually reformulated into D4 requirements before engineering can act on them.
+
+**Transition from B to C**
+
+Connect validation findings directly to D4 (requirements) without manual reformulation. AI should assist in translating validated hypotheses into specification-ready form.
+
+**Verification:** A validated hypothesis can move into engineering without a separate requirements-authoring step.
+
+### C — Continuous
+
+The parallel prototype track is formally integrated with the main delivery cycle — validated hypotheses flow directly into D4 (requirements) without manual reformulation, and the prioritization framework (D5) treats validation findings as first-class inputs. AI assists in accelerating prototype construction and synthesizing market signals. The parallel track remains distinct but its output latency is visibly shorter than at Level B.
+
+**Transition from C to D**
+
+Reduce the cycle time of the parallel track until it approaches the cadence of the main delivery cycle.
+
+**Verification:** The elapsed time from hypothesis to validated finding is measured and trending toward the main delivery cycle time.
+
+### D — Integral
+
+The velocity of the parallel prototype track matches or approaches the main delivery cycle — at this level the distinction between prototype and production-ready begins to dissolve as a practical matter. When a hypothesis is validated, the prototype artifact is often production-worthy by the time validation is complete, and the decision of whether to promote it or discard it is a product decision, not a technical one. The parallel track still exists as a named practice, but its output is indistinguishable in quality and cadence from the main track.
+
+**Transition from D to E**
+
+Remove the named distinction between the prototype track and the main delivery cycle. At Level E, hypotheses enter D4 (requirements) directly — there is no separate prototype intake path.
+
+**Verification:** The organization cannot point to a prototype environment or a validation sprint as distinct from its normal delivery motion.
+
+### E — Telemetric
+
+The experimentation and validation activity has been subsumed into the main delivery and feedback cycle — there is no separate prototype track. A well-formed hypothesis enters D4 (requirements), moves through D5 (prioritization), ships, and is validated by D11 (outcome measurement) within the same cycle time D12 measures.
+
+**Sustainment:** Sustain: verify that the subsumption of the parallel track is a consequence of cycle time maturity and not a result of abandoning validation discipline. Hypotheses are still being formally stated and evaluated — they are simply moving through the main track rather than a parallel one.
+
+## D11. Analytics & outcome measurement
 
 **Type:** Model-native | **Note:** This is the PM-function view of instrumentation — product outcome measurement, not delivery-system observability (`STD-SDLC-MM` D12). Failure classification vocabulary at Level D is borrowed from `STD-PRIORITIZATION-MM`.
 
 **Definition:** The capability to continuously measure whether PM decisions are producing intended results — revenue impact, adoption, retention, customer satisfaction — and feed those signals back into upstream dimensions as a closed loop.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | Outcome measurement is retrospective and anecdotal — success is assessed informally after the fact, based on revenue reports or customer complaints rather than instrumented product signals. The PM function has no standing view of whether its decisions are producing intended results. | For every material prioritization decision, record the expected outcome, measure, owner, and review date before commitment. | The PM function can state what success looks like for every item in the active portfolio — before delivery, not after. |
-| B - Modeled | Major initiatives receive scheduled outcome reviews. AI assists in assembling outcome data and comparing realized results against original hypotheses. Outcome measurement is initiative-scoped — there is no standing view of portfolio-level outcome performance, and findings do not automatically feed back into D1 or D5. | Extend outcome tracking to all material decisions, not only major initiatives. Establish a benefits register and require scheduled outcome reviews for every tracked decision. | A benefits register entry exists for a material decision outside the initiative-scoped set that previously would have gone untracked. |
-| C - Continuous | Outcome measurement is systematic and covers all material prioritization decisions, not only major initiatives. A benefits register links each decision to its expected outcome, measure, owner, and review date. AI assembles outcome evidence packages at scheduled review points. Findings are manually surfaced to D5 and D8 — the feedback is present but not automatic. | Automate outcome anomaly detection. AI should surface results diverging materially from expectations without waiting for a scheduled review. | An outcome anomaly is surfaced by the system before a scheduled review would have caught it. |
-| D - Integral | Outcome measurement operates continuously rather than at scheduled review points. AI surfaces outcome anomalies without waiting for a scheduled review. Findings begin feeding automatically into D5 and D8, though the connection to D1 (market discovery model recalibration) remains manual. The PM function can distinguish execution failure from forecast error at this level, but cannot yet systematically distinguish model error or intent failure. | Close the full outcome feedback loop to D1 (market discovery). The PM function should be able to distinguish all four failure classes (execution failure, forecast error, model error, possible intent failure) and route each to its correct correction path. | The PM function's own account of a miss names one of the four specific failure classes, not a generic "execution" catch-all. |
-| E - Telemetric | Outcome measurement is a continuously operating, AI-assisted feedback layer — revenue impact, adoption, retention, customer satisfaction, and competitive response are instrumented and visible in real time, feeding back automatically into D1, D5, D8, and D9. The PM function can distinguish all four failure classes and routes each to its correct correction path. PM analytical work shifts from assembling outcome data to interpreting AI-surfaced anomalies and deciding on responses the model cannot resolve. | Sustain: verify that the continuous outcome measurement layer is surfacing genuine anomalies rather than generating noise, and that the four-way failure classification is being applied rigorously rather than defaulting to execution failure as the catch-all explanation. | — |
+### A — Nascent
+
+Outcome measurement is retrospective and anecdotal — success is assessed informally after the fact, based on revenue reports or customer complaints rather than instrumented product signals. The PM function has no standing view of whether its decisions are producing intended results.
+
+**Transition from A to B**
+
+For every material prioritization decision, record the expected outcome, measure, owner, and review date before commitment.
+
+**Verification:** The PM function can state what success looks like for every item in the active portfolio — before delivery, not after.
+
+### B — Modeled
+
+Major initiatives receive scheduled outcome reviews. AI assists in assembling outcome data and comparing realized results against original hypotheses. Outcome measurement is initiative-scoped — there is no standing view of portfolio-level outcome performance, and findings do not automatically feed back into D1 or D5.
+
+**Transition from B to C**
+
+Extend outcome tracking to all material decisions, not only major initiatives. Establish a benefits register and require scheduled outcome reviews for every tracked decision.
+
+**Verification:** A benefits register entry exists for a material decision outside the initiative-scoped set that previously would have gone untracked.
+
+### C — Continuous
+
+Outcome measurement is systematic and covers all material prioritization decisions, not only major initiatives. A benefits register links each decision to its expected outcome, measure, owner, and review date. AI assembles outcome evidence packages at scheduled review points. Findings are manually surfaced to D5 and D8 — the feedback is present but not automatic.
+
+**Transition from C to D**
+
+Automate outcome anomaly detection. AI should surface results diverging materially from expectations without waiting for a scheduled review.
+
+**Verification:** An outcome anomaly is surfaced by the system before a scheduled review would have caught it.
+
+### D — Integral
+
+Outcome measurement operates continuously rather than at scheduled review points. AI surfaces outcome anomalies without waiting for a scheduled review. Findings begin feeding automatically into D5 and D8, though the connection to D1 (market discovery model recalibration) remains manual. The PM function can distinguish execution failure from forecast error at this level, but cannot yet systematically distinguish model error or intent failure.
+
+**Transition from D to E**
+
+Close the full outcome feedback loop to D1 (market discovery). The PM function should be able to distinguish all four failure classes (execution failure, forecast error, model error, possible intent failure) and route each to its correct correction path.
+
+**Verification:** The PM function's own account of a miss names one of the four specific failure classes, not a generic "execution" catch-all.
+
+### E — Telemetric
+
+Outcome measurement is a continuously operating, AI-assisted feedback layer — revenue impact, adoption, retention, customer satisfaction, and competitive response are instrumented and visible in real time, feeding back automatically into D1, D5, D8, and D9. The PM function can distinguish all four failure classes and routes each to its correct correction path. PM analytical work shifts from assembling outcome data to interpreting AI-surfaced anomalies and deciding on responses the model cannot resolve.
+
+**Sustainment:** Sustain: verify that the continuous outcome measurement layer is surfacing genuine anomalies rather than generating noise, and that the four-way failure classification is being applied rigorously rather than defaulting to execution failure as the catch-all explanation.
 
 ---
 
-#### D12. Feedback loop velocity
+## D12. Feedback loop velocity
 
 **Type:** Model-native (compare `STD-SDLC-MM` D13) | **Note:** PDLC's measurement frame is the full PDLC chain (D1–D11) rather than the engineering delivery chain. Slow feedback is an existential threat; fast feedback is a going-concern advantage.
 
 **Definition:** The end-to-end cycle time from signal — market, user, outcome, competitive — to shipped and validated response, as a property of the whole PM system rather than any individual stage.
 
-| Level | Description | Transition to next level | Verification |
-|-------|-------------|--------------------------|---------------|
-| A - Nascent | End-to-end cycle time from signal to shipped response is unmeasured and dominated by handoffs between disconnected stages and teams. The organization cannot say how long it takes to respond to a market shift, a competitive move, or a customer outcome signal. | Instrument end-to-end cycle time across the D1-D11 chain. Define what counts as a signal (market shift, competitive move, outcome data point, customer feedback escalation), what counts as a shipped response, and begin measuring elapsed time between them. | The organization can state, in a specific unit of time, how long it took to respond to the most recent market shift or competitive move. |
-| B - Modeled | Cycle time is measured retrospectively for major releases or strategic pivots, but is not tracked continuously and is not used to identify which handoff in the PM chain is the current bottleneck. | Move from retrospective measurement to continuous tracking. Cycle time should be a standing metric, broken down by stage and handoff across the D1-D11 chain, so the organization can identify which handoff currently dominates total cycle time. | Cycle time is reported as a standing metric broken down by stage and handoff, not recomputed specially when someone asks. |
-| C - Continuous | Cycle time is tracked continuously as a standing metric, broken down by stage and handoff across the D1-D11 chain — the organization can identify which handoff currently dominates total cycle time, though addressing it requires separate prioritization and planning work. | Make bottleneck resolution a routine prioritization input. When D12's measurement identifies a dominant handoff bottleneck, closing it via the relevant dimension's next maturity step should be treated as comparable in priority to feature work. | A bottleneck D12 identified has a corresponding prioritized work item addressing it, not just a measurement sitting unacted on. |
-| D - Integral | Improving cycle time is a routine input to prioritization across D1-D11 — when D12's measurement identifies a dominant bottleneck, closing it via the relevant dimension's next maturity step is treated as comparable in priority to feature work. | Compress cycle time to days-not-months on the dominant signal types. Verify that D10's experimentation and validation activity is beginning to merge with the main delivery cycle — the parallel prototype track should be visibly shrinking as a distinct practice. | A dominant bottleneck closes within a days-not-months window, not the months-long cadence the organization operated on previously. |
-| E - Telemetric | End-to-end cycle time is short enough to be a competitive differentiator, operating on a days-not-months cadence. At this level, D10's experimentation and validation activity has been subsumed: a validated idea is no longer a parallel-track activity but a property of the cycle itself. | Sustain: verify that cycle time compression is preserving strategic coherence and human authority rather than amplifying speed at the cost of governance. Audit whether the D10 subsumption is complete — its disappearance should be a consequence of cycle time maturity, not a result of abandoning validation discipline. | — |
+### A — Nascent
+
+End-to-end cycle time from signal to shipped response is unmeasured and dominated by handoffs between disconnected stages and teams. The organization cannot say how long it takes to respond to a market shift, a competitive move, or a customer outcome signal.
+
+**Transition from A to B**
+
+Instrument end-to-end cycle time across the D1-D11 chain. Define what counts as a signal (market shift, competitive move, outcome data point, customer feedback escalation), what counts as a shipped response, and begin measuring elapsed time between them.
+
+**Verification:** The organization can state, in a specific unit of time, how long it took to respond to the most recent market shift or competitive move.
+
+### B — Modeled
+
+Cycle time is measured retrospectively for major releases or strategic pivots, but is not tracked continuously and is not used to identify which handoff in the PM chain is the current bottleneck.
+
+**Transition from B to C**
+
+Move from retrospective measurement to continuous tracking. Cycle time should be a standing metric, broken down by stage and handoff across the D1-D11 chain, so the organization can identify which handoff currently dominates total cycle time.
+
+**Verification:** Cycle time is reported as a standing metric broken down by stage and handoff, not recomputed specially when someone asks.
+
+### C — Continuous
+
+Cycle time is tracked continuously as a standing metric, broken down by stage and handoff across the D1-D11 chain — the organization can identify which handoff currently dominates total cycle time, though addressing it requires separate prioritization and planning work.
+
+**Transition from C to D**
+
+Make bottleneck resolution a routine prioritization input. When D12's measurement identifies a dominant handoff bottleneck, closing it via the relevant dimension's next maturity step should be treated as comparable in priority to feature work.
+
+**Verification:** A bottleneck D12 identified has a corresponding prioritized work item addressing it, not just a measurement sitting unacted on.
+
+### D — Integral
+
+Improving cycle time is a routine input to prioritization across D1-D11 — when D12's measurement identifies a dominant bottleneck, closing it via the relevant dimension's next maturity step is treated as comparable in priority to feature work.
+
+**Transition from D to E**
+
+Compress cycle time to days-not-months on the dominant signal types. Verify that D10's experimentation and validation activity is beginning to merge with the main delivery cycle — the parallel prototype track should be visibly shrinking as a distinct practice.
+
+**Verification:** A dominant bottleneck closes within a days-not-months window, not the months-long cadence the organization operated on previously.
+
+### E — Telemetric
+
+End-to-end cycle time is short enough to be a competitive differentiator, operating on a days-not-months cadence. At this level, D10's experimentation and validation activity has been subsumed: a validated idea is no longer a parallel-track activity but a property of the cycle itself.
+
+**Sustainment:** Sustain: verify that cycle time compression is preserving strategic coherence and human authority rather than amplifying speed at the cost of governance. Audit whether the D10 subsumption is complete — its disappearance should be a consequence of cycle time maturity, not a result of abandoning validation discipline.

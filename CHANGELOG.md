@@ -1,5 +1,9 @@
 # Changelog — AI-Native PDLC Maturity Model
 
+## v1.2.5 — 2026-10-17
+
+**Layout only: text-neutral under STD-MODEL-PARTS v1.1.** Each of D4–D12's tables is written in the model family's common form (§5.1, §5.2): the dimension under its own second-level heading, each level under `### A — Nascent`, its step onward as `**Transition from A to B**` with its `**Verification:**` line, and the sustainment at E as `**Sustainment:**`. Every cell is kept word for word; row E's verification cell, a dash, has no text to keep. The reading rules take the common title, *How to read this model*. No word of any level, transition, verification, sustainment, definition, note or reading rule changed, as the release check's text-neutral test shows against v1.2.4; scores against v1.2.4 are unaffected. Work Item OKF-TOGAF#205.
+
 ## v1.2.4 — 2026-10-17
 
 A wording release under the model family's parts standard (STD-MODEL-PARTS v1.1). No level, transition or verification changed, and no score against v1.2.3 is affected.
