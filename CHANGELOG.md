@@ -1,5 +1,11 @@
 # Changelog — AI-Native PDLC Maturity Model
 
+## v1.3.0 — 2026-11-14
+
+**Two clauses for a product that contains AI, in D4 and D11.** Where a product the PM function manages contains AI, D4 asks at Level C that the specification of each feature whose output comes from AI states what a wrong output looks like and how a user can check the output before acting on it, and D11 asks at Level C that the tracked measures include how often its AI's outputs are wrong in use and how often users check, correct or discard them before acting. Each clause is added to the step from B to C, its verification and Level C, and each dimension's note carries it to D and E. D11's note gains two sentences, on model error and on engineering's evaluation of the product's AI. No existing word changed, and no dimension was added.
+
+**How a score can move:** a function whose products contain no AI moves nowhere. A function managing a product with AI that was scored C, D or E on D4 or D11 against v1.2.5 or an earlier version keeps that score at the version it was taken against; against this version it holds C or above on either dimension only once it meets that dimension's clause. No saved assessment's shape changes. Work Item OKF-TOGAF#221.
+
 ## v1.2.5 — 2026-10-17
 
 **Layout only: text-neutral under STD-MODEL-PARTS v1.1.** Each of D4–D12's tables is written in the model family's common form (§5.1, §5.2): the dimension under its own second-level heading, each level under `### A — Nascent`, its step onward as `**Transition from A to B**` with its `**Verification:**` line, and the sustainment at E as `**Sustainment:**`. Every cell is kept word for word; row E's verification cell, a dash, has no text to keep. The reading rules take the common title, *How to read this model*. No word of any level, transition, verification, sustainment, definition, note or reading rule changed, as the release check's text-neutral test shows against v1.2.4; scores against v1.2.4 are unaffected. Work Item OKF-TOGAF#205.

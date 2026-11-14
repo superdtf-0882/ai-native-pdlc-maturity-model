@@ -1,6 +1,6 @@
 # AI-Native PDLC Maturity Model — Matrix
 
-**Version 1.2.5 — 2026-10-17** (layout only, text-neutral under STD-MODEL-PARTS v1.1: each of D4–D12's tables is written in the model family's common form, with every cell kept word for word, the dimensions at the second heading level, and the reading rules take the family's common title. No level, transition or verification changed; scores against v1.2.4 are unaffected. See `CHANGELOG.md`.)
+**Version 1.3.0 — 2026-11-14** (two clauses for a product that contains AI, in D4 and D11, each at Level C and carried to D and E by its dimension's note; D11's note gains two sentences. No existing word changed and no dimension was added. A score taken against an earlier version keeps its value at that version. See `CHANGELOG.md`.)
 
 This is the full A–E maturity matrix for the AI-Native PDLC Maturity Model — 12 dimensions (D1–D3 by reference, D4–D12 in full below), readable in-browser and directly usable as input to AI tools. **This markdown document is the source of truth for D4–D12.** D1–D3 are sourced from `shared_intelligence_layer.md`, not this file; D4 is this model's own (see D4's own note below).
 
@@ -45,7 +45,7 @@ PDLC-specific deltas on top of the shared text:
 
 ## D4. Requirements management
 
-**Type:** Shared origin, diverged content | **Note:** PDLC delta: traceability extends upstream to market/user signal (D1–D3) and downstream to portfolio investment (D8). The PM function owns this bridge. D4 diverges from `STD-SDLC-MM` D4 in kind, not degree: PDLC's D4 gates portfolio investment and upstream/downstream traceability. Per that reasoning, D4 carries its own full ladder here rather than a shared-source reference.
+**Type:** Shared origin, diverged content | **Note:** PDLC delta: traceability extends upstream to market/user signal (D1–D3) and downstream to portfolio investment (D8). The PM function owns this bridge. D4 diverges from `STD-SDLC-MM` D4 in kind, not degree: PDLC's D4 gates portfolio investment and upstream/downstream traceability. Per that reasoning, D4 carries its own full ladder here rather than a shared-source reference. Where a product the function manages contains AI, Level C's sentence on wrong outputs holds at D and E as well.
 
 **Definition:** The capability to author precise, testable, machine-actionable specifications with full traceability from market/user signal through delivery, such that specification quality directly gates AI generation quality, verification coverage, and portfolio investment decisions.
 
@@ -65,13 +65,13 @@ A consistent specification format is adopted and AI assists with drafting. The s
 
 **Transition from B to C**
 
-Make specifications machine-actionable. Define what machine-actionable means for your engineering context such that an AI generation tool can consume a specification without human reformulation. Begin building systematic traceability from market/user signal to specification.
+Make specifications machine-actionable. Define what machine-actionable means for your engineering context such that an AI generation tool can consume a specification without human reformulation. Begin building systematic traceability from market/user signal to specification. Where a product the function manages contains AI, add to the specification of each feature whose output comes from AI what a wrong output looks like and how a user can check the output before acting on it.
 
-**Verification:** An AI generation tool consumes a specification as written and produces a usable draft artifact without a person first restructuring or reformulating it.
+**Verification:** An AI generation tool consumes a specification as written and produces a usable draft artifact without a person first restructuring or reformulating it. Where a product the function manages contains AI, a reviewer can find both in the specification of any feature whose output comes from AI, without asking its author.
 
 ### C — Continuous
 
-Specifications are structured and machine-actionable. AI generation tools can consume them without human reformulation. Traceability from market/user signal to specification is maintained systematically.
+Specifications are structured and machine-actionable. AI generation tools can consume them without human reformulation. Traceability from market/user signal to specification is maintained systematically. Where a product the function manages contains AI, the specification of each feature whose output comes from AI states what a wrong output looks like and how a user can check the output before acting on it.
 
 **Transition from C to D**
 
@@ -411,7 +411,7 @@ The experimentation and validation activity has been subsumed into the main deli
 
 ## D11. Analytics & outcome measurement
 
-**Type:** Model-native | **Note:** This is the PM-function view of instrumentation — product outcome measurement, not delivery-system observability (`STD-SDLC-MM` D12). Failure classification vocabulary at Level D is borrowed from `STD-PRIORITIZATION-MM`.
+**Type:** Model-native | **Note:** This is the PM-function view of instrumentation — product outcome measurement, not delivery-system observability (`STD-SDLC-MM` D12). Failure classification vocabulary at Level D is borrowed from `STD-PRIORITIZATION-MM`. Where a product the function manages contains AI, Level C's sentence on wrong outputs and users' checks holds at D and E as well. A wrong output from AI in a product is a product outcome measured from Level C; it is not the "model error" of the four failure classes at D and E, which is the prioritization model's error. The rate of wrong outputs may come from engineering's evaluation of the product's AI, which `STD-SDLC-MM` D12 asks for at its Level D; the two models are scored apart.
 
 **Definition:** The capability to continuously measure whether PM decisions are producing intended results — revenue impact, adoption, retention, customer satisfaction — and feed those signals back into upstream dimensions as a closed loop.
 
@@ -431,13 +431,13 @@ Major initiatives receive scheduled outcome reviews. AI assists in assembling ou
 
 **Transition from B to C**
 
-Extend outcome tracking to all material decisions, not only major initiatives. Establish a benefits register and require scheduled outcome reviews for every tracked decision.
+Extend outcome tracking to all material decisions, not only major initiatives. Establish a benefits register and require scheduled outcome reviews for every tracked decision. Where a product the function manages contains AI, add to the tracked measures how often its AI's outputs are wrong in use, and how often users check, correct or discard them before acting.
 
-**Verification:** A benefits register entry exists for a material decision outside the initiative-scoped set that previously would have gone untracked.
+**Verification:** A benefits register entry exists for a material decision outside the initiative-scoped set that previously would have gone untracked. Where a product the function manages contains AI, the PM function can state both rates, current, for a feature whose output comes from AI.
 
 ### C — Continuous
 
-Outcome measurement is systematic and covers all material prioritization decisions, not only major initiatives. A benefits register links each decision to its expected outcome, measure, owner, and review date. AI assembles outcome evidence packages at scheduled review points. Findings are manually surfaced to D5 and D8 — the feedback is present but not automatic.
+Outcome measurement is systematic and covers all material prioritization decisions, not only major initiatives. A benefits register links each decision to its expected outcome, measure, owner, and review date. AI assembles outcome evidence packages at scheduled review points. Findings are manually surfaced to D5 and D8 — the feedback is present but not automatic. Where a product the function manages contains AI, the tracked measures include how often its AI's outputs are wrong in use and how often users check, correct or discard them before acting.
 
 **Transition from C to D**
 
