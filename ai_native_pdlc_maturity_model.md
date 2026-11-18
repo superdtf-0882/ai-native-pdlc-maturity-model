@@ -1,6 +1,6 @@
 # AI-Native PDLC Maturity Model — Matrix
 
-**Version 1.3.0 — 2026-11-14** (two clauses for a product that contains AI, in D4 and D11, each at Level C and carried to D and E by its dimension's note; D11's note gains two sentences. No existing word changed and no dimension was added. A score taken against an earlier version keeps its value at that version. See `CHANGELOG.md`.)
+**Version 1.4.0 — 2026-11-18** (D1–D3 cite the shared intelligence layer at STD-SHARED-INTELLIGENCE v1.3, in SDLC `v1.5.0`, where they cited v1.2 at SDLC `v1.4.3`. No text of this model's own changed; what D1–D3 measure changes with the layer. Earlier: v1.3.0, 2026-11-14, two clauses for a product that contains AI, in D4 and D11.)
 
 This is the full A–E maturity matrix for the AI-Native PDLC Maturity Model — 12 dimensions (D1–D3 by reference, D4–D12 in full below), readable in-browser and directly usable as input to AI tools. **This markdown document is the source of truth for D4–D12.** D1–D3 are sourced from `shared_intelligence_layer.md`, not this file; D4 is this model's own (see D4's own note below).
 
@@ -31,7 +31,7 @@ Each level is followed by the transition required to reach the next level, and a
 
 ## D1–D3. Shared Intelligence Layer
 
-**Basis:** STD-SHARED-INTELLIGENCE v1.2, github.com/superdtf-0882/ai-native-sdlc-maturity-model/shared_intelligence_layer.md at v1.4.3; referenced.
+**Basis:** STD-SHARED-INTELLIGENCE v1.3, github.com/superdtf-0882/ai-native-sdlc-maturity-model/shared_intelligence_layer.md at v1.5.0; referenced.
 
 D1 (Market discovery & definition), D2 (Buyer/user persona development), and D3 (Positioning & competitive intelligence) are inherited by reference from `shared_intelligence_layer.md` — the canonical source, ratified 2026-07-23. This matrix does not maintain its own copy of D1–D3; see that document for the full A–E ladder text for all three.
 

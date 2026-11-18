@@ -8,7 +8,7 @@ A maturity model for the Product Development Life Cycle (PDLC) — specifically,
 
 12 dimensions (D1–D12), each scored on a five-level ladder (A–E) sharing the family's five level names — Nascent / Modeled / Continuous / Integral / Telemetric. D1–D3 come from the shared intelligence layer; D4–D12 are this model's own.
 
-See `ai_native_pdlc_maturity_model.md` for the full matrix — the source of truth for D4–D12. D1–D3 are sourced from [`shared_intelligence_layer.md`](https://github.com/superdtf-0882/ai-native-sdlc-maturity-model/blob/v1.4.3/shared_intelligence_layer.md) in the SDLC repo, not duplicated here.
+See `ai_native_pdlc_maturity_model.md` for the full matrix — the source of truth for D4–D12. D1–D3 are sourced from [`shared_intelligence_layer.md`](https://github.com/superdtf-0882/ai-native-sdlc-maturity-model/blob/v1.5.0/shared_intelligence_layer.md) in the SDLC repo, not duplicated here.
 
 ## Other files
 

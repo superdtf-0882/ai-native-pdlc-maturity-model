@@ -1,5 +1,13 @@
 # Changelog — AI-Native PDLC Maturity Model
 
+## v1.4.0 — 2026-11-18
+
+**D1–D3 now cite the shared intelligence layer at v1.3, in SDLC `v1.5.0`.** This model writes no D1–D3 text of its own. Its basis line moves from STD-SHARED-INTELLIGENCE v1.2, at SDLC `v1.4.3`, to v1.3, at `v1.5.0`, ratified by David Facer on 2026-10-18 and released in SDLC `v1.5.0`. What D1–D3 measure changes with it: how current the intelligence is when a question arrives, not how often it is updated. SDLC's `v1.5.0` changelog says what changed in the layer.
+
+**How a score can move:** D1–D3 against this tag are scored with SPEC-D6-SCORE v1.6, by the PDLC instrument's rule 10; against v1.3.0 and earlier they stay v1.5's, and the two are not comparable, in the three ways SDLC's `v1.5.0` changelog names. D4–D12 are unchanged.
+
+Changed: the matrix's version line and its D1–D3 basis line, and the README's link to the layer. Work Item OKF-TOGAF#213.
+
 ## v1.3.0 — 2026-11-14
 
 **Two clauses for a product that contains AI, in D4 and D11.** Where a product the PM function manages contains AI, D4 asks at Level C that the specification of each feature whose output comes from AI states what a wrong output looks like and how a user can check the output before acting on it, and D11 asks at Level C that the tracked measures include how often its AI's outputs are wrong in use and how often users check, correct or discard them before acting. Each clause is added to the step from B to C, its verification and Level C, and each dimension's note carries it to D and E. D11's note gains two sentences, on model error and on engineering's evaluation of the product's AI. No existing word changed, and no dimension was added.
