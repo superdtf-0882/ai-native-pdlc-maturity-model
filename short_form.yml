@@ -20,9 +20,10 @@
 # RE-VERIFIED 2026-10-17 against ab96015 (the text commit of v1.2.4): read by the family parser, D4-D12's definitions, levels, transitions, verification lines and sustainment are the same as at the cited v1.1.0 commit 67806c6; the notes changed at v1.2.1 and v1.2.4, and no cell compresses a note; the cells unchanged.
 # RE-VERIFIED 2026-10-17 against ecf8479 (the text commit of v1.2.5): layout only; the cells unchanged from v1.2.4.
 # RE-VERIFIED 2026-11-14 against 58dadb1 (the text commit of v1.3.0): D4.C and D11.C gain a clause for a product that contains AI, which their cells, seven to nine words each, do not compress; the matrix carries it. No other cell's text changed; the cells unchanged.
+# RE-VERIFIED 2026-11-18 against 3b95b7b (the text commit of v1.4.0): D4-D12 unchanged; only the D1-D3 basis line moved, and D1-D3's cells come from SDLC's own short form, so this file's cells are unchanged.
 version: "1.0.0"
 source_matrix_version: "1.4.0"
-source_matrix_commit: "58dadb1c9960f5c055a2fc82f1b4011d7e812cfd"
+source_matrix_commit: "3b95b7bb7b32720a0f96dade0bc212cab0f61e71"
 generated: "2026-07-28"
 
 dimensions:
